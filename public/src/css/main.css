@@ -1,0 +1,73 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 8px 0;
+}
+
+.main {
+    padding: 0 32px;
+}
+
+.centered {
+    text-align: center;
+    vertical-align: middle;
+}
+
+header {
+    position: relative;
+    padding: 16px 32px
+}
+
+footer {
+    position: absolute;
+    padding: 16px 0;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 16px;
+}
+
+header nav li:first-of-type {
+    padding-left: 0;
+}
+
+header nav li:last-of-type {
+    padding-right: 0;
+}
+
+nav a {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+header nav a {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+footer nav a {
+    font-size: 12px;
+}
+
+header nav a:hover {
+    color: salmon;
+}
