@@ -24,8 +24,8 @@ Route::group(['prefix' => 'do'], function () {
         return view('greet');
     });
 
-    Route::get('hug', function () {
-        return view('hug');
+    Route::get('hug/{name?}', function ($name = null) {
+        return view('hug', ['name' => $name]);
     })->name('hug');
 
     Route::post('/', function (\Illuminate\Http\Request $request) {
