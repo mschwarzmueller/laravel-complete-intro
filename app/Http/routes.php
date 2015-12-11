@@ -11,24 +11,41 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [
+    'uses' => 'NiceActionController@getHome',
+    'as' => 'home'
+]);
+
+Route::delete('actions', [
+   'uses' => 'NiceActionController@deleteActions',
+    'as' => 'delete'
+]);
 
 // Before grouping, show it without
 // Explain what closures are
 // Explain named and unnamed routes and how to use them (route() vs. url())
 
 Route::group(['prefix' => 'do'], function () {
-    Route::get('greet', [
-        'uses' => 'NiceActionController@getGreet',
-        'as' => 'greet'
+
+    Route::get('/{action}', [
+        'uses' => 'NiceActionController@getAction',
+        'as' => 'action'
     ]);
 
-    Route::get('hug/{name?}', [
-        'uses' => 'NiceActionController@getHug',
-        'as' => 'hug'
-    ]);
+//    Route::get('greet', [
+//        'uses' => 'NiceActionController@getGreet',
+//        'as' => 'greet'
+//    ]);
+//
+//    Route::get('hug/{name?}', [
+//        'uses' => 'NiceActionController@getHug',
+//        'as' => 'hug'
+//    ]);
+//
+//    Route::get('wave', [
+//        'uses' => 'NiceActionController@getWave',
+//        'as' => 'wave'
+//    ]);
 
     Route::post('/', [
         'uses' => 'NiceActionController@postDoCustomAction',

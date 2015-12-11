@@ -71,3 +71,9 @@ footer nav a {
 header nav a:hover {
     color: salmon;
 }
+
+.nice-action-log {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
