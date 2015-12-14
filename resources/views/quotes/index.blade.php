@@ -41,7 +41,7 @@
             @if($quotes->currentPage() !== 1)
                 <a href="{{ $quotes->previousPageUrl() }}"><span class="fa fa-caret-left"></span></a>
             @endif
-            @if($quotes->currentPage() !== $quotes->lastPage())
+            @if($quotes->currentPage() !== $quotes->lastPage() && $quotes->hasPages())
                     <a href="{{ $quotes->nextPageUrl() }}"><span class="fa fa-caret-right"></span></a>
             @endif
         </div>
