@@ -14,9 +14,9 @@ class QuoteController extends Controller
         // If author is provided => Only find quotes by author
         // Possibly paginate
         if (!is_null($author)) {
-            $quotes = Author::where('name', $author)->first()->quotes()->orderBy('created_at', 'desc')->get();
+            $quotes = Author::where('name', $author)->first()->quotes()->orderBy('created_at', 'desc')->paginate(6);
         } else {
-            $quotes = Quote::take(6)->orderBy('created_at', 'desc')->get();
+            $quotes = Quote::take(6)->orderBy('created_at', 'desc')->paginate(6);
         }
         return view('quotes.index', ['quotes' => $quotes]);
     }

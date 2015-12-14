@@ -8,6 +8,10 @@
     Trending quotes
 @endsection
 
+@section('styles')
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+@endsection
+
 @section('content')
     @if(!empty(Request::segment(1)))
         <div class="filter-bar">
@@ -33,6 +37,14 @@
                 <div class="info">Created by <a href="{{ route('index', ['author' => $quotes[$i]->author->name]) }}">{{ $quotes[$i]->author->name }}</a> on {{ $quotes[$i]->created_at }}</div>
             </article>
         @endfor
+        <div class="pagination">
+            @if($quotes->currentPage() !== 1)
+                <a href="{{ $quotes->previousPageUrl() }}"><span class="fa fa-caret-left"></span></a>
+            @endif
+            @if($quotes->currentPage() !== $quotes->lastPage())
+                    <a href="{{ $quotes->nextPageUrl() }}"><span class="fa fa-caret-right"></span></a>
+            @endif
+        </div>
     </div>
     <div class="edit-quote">
         <h1>Add a Quote</h1>

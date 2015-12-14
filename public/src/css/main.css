@@ -145,3 +145,17 @@ body {
     color: black;
     text-align: center;
 }
+
+.pagination {
+    font-size: 20px;
+}
+
+.pagination a {
+    color: black;
+    text-decoration: none;
+}
+
+.pagination a:hover,
+.pagination a:active {
+    color: #ccc;
+}
