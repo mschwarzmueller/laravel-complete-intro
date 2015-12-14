@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(NiceActionsSeeder::class);
+        $this->call(NiceActionSeeder::class);
 
         Model::reguard();
     }

@@ -57,5 +57,13 @@
             @endforeach
             </tbody>
         </table>
+        <div class="pagination">
+            @if($logged_nice_actions->currentPage() !== 1)
+                <a href="{{ $logged_nice_actions->previousPageUrl() }}">Previous Page</a>
+            @endif
+            @if($logged_nice_actions->currentPage() !== $logged_nice_actions->lastPage() && $logged_nice_actions->hasPages())
+                <a href="{{ $logged_nice_actions->nextPageUrl() }}">Next Page</a>
+            @endif
+        </div>
     </div>
 @endsection

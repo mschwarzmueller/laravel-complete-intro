@@ -12,7 +12,7 @@ class NiceActionController extends Controller
     public function getHome()
     {
         $nice_action_names = NiceAction::select('name')->get();
-        $logged_nice_actions = LoggedAction::all();
+        $logged_nice_actions = LoggedAction::paginate(6);
         return view('home', ['logged_nice_actions' => $logged_nice_actions, 'nice_action_names' => $nice_action_names]);
     }
 
