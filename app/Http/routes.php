@@ -13,4 +13,19 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
+
+Route::get('/admin/dashboard', [
+   'uses' => 'AdminController@getDashboard',
+    'as' => 'admin.dashboard'
+]);
+
+Route::post('/admin/login', [
+   'uses' => 'AdminController@postLogin',
+    'as' => 'login'
+]);
+
+Route::get('/admin/logout', [
+   'uses' => 'AdminController@getLogout',
+    'as' => 'logout'
+]);
