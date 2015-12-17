@@ -9,11 +9,18 @@ class AdminController extends Controller
 {
     public function getDashboard()
     {
-        // Check if logged in
-        if (!Auth::check()) {
-            return redirect()->back()->with(['fail' => 'You have to be logged in to access this site!']);
-        }
+        // First show old method with checks in each function (see authenticate video)
         return view('admin.dashboard');
+    }
+
+    public function getPostsIndex()
+    {
+        return view('admin.posts');
+    }
+
+    public function getContactIndex()
+    {
+        return view('admin.contact');
     }
 
     public function postLogin(Request $request)
