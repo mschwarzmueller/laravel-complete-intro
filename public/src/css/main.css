@@ -77,9 +77,10 @@ header nav a:hover {
     border-radius: 3px;
     background-color: lightsalmon;
     color: black;
-    width: 250px;
+    width: 400px;
     padding: 16px;
     margin: 32px auto;
+    text-align: left;
 }
 
 form input,

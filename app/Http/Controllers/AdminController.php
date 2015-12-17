@@ -25,9 +25,11 @@ class AdminController extends Controller
 
     public function postLogin(Request $request)
     {
-        if (!isset($request['email']) || strlen($request['email']) === 0 || !isset($request['password']) || strlen($request['password']) === 0) {
-            return redirect()->back()->with(['fail' => 'Please provide an email address as well as a password!']);
-        }
+        // Explain different rules (like unique, max:, min: ...)
+        $this->validate($request, [
+           'email' => 'required|email',
+            'password' => 'required'
+        ]);
         if (!Auth::attempt(['email' => $request['email'], 'password' => $request['password']])) {
             return redirect()->back()->with(['fail' => 'You could not be logged in. Please check your login credentials!']);
         }
