@@ -1,0 +1,219 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Robote", sans-serif;
+}
+
+h3 {
+    margin: 8px 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #0863d3;
+}
+
+a:hover {
+    color: #86c3ff;
+}
+
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #0863d3;
+    border-radius: 3px;
+    padding: 4px 6px;
+    background-color: #0863d3;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: white;
+    color: #0863d3;
+}
+
+a.danger {
+    color: red;
+}
+
+a.danger:hover,
+a.danger:active {
+    color: #ffaf96;
+}
+
+.clearfix {
+    clear:both;
+}
+
+/* Header */
+header.top-nav {
+    background-color: #0863d3;
+    font-size: 20px;
+}
+
+header.top-nav nav {
+    width: calc(85% - 64px);
+    margin: auto;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header li {
+    height: inherit;
+    display: inline-block;
+}
+
+header.top-nav li {
+    text-align: center;
+    padding: 16px 10px;
+    //transition: all 0.3s;
+}
+
+header.top-nav li:first-of-type {
+    margin-left: -10px;
+}
+
+header.top-nav li:last-of-type {
+    margin-right: -10px;
+}
+
+header.top-nav li:hover,
+header.top-nav li:active {
+    background-color: white;
+}
+
+header.top-nav li:hover a,
+header.top-nav li:active a {
+    color: #0863d3;
+}
+
+header.top-nav li.active {
+    background-color: white;
+}
+
+header.top-nav li.active a {
+    color: #0863d3;
+}
+
+header.top-nav a {
+    color: white;
+}
+
+header.top-nav a:hover,
+header.top-nav a:active {
+    color: lightgray;
+}
+
+.container {
+    margin: 64px auto;
+    width: 85%;
+    text-align: center;
+}
+
+/* Dashboard */
+.card {
+    text-align: left;
+    float: left;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 2px 2px 2px #ccc;
+    -moz-box-shadow: 2px 2px 2px #ccc;
+    box-shadow: 2px 2px 2px #ccc;
+    width: 40%;
+    margin: 32px;
+}
+
+.card header {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-bottom: 2px solid #ccc;
+    background-color: #eee;
+}
+
+.card section ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px;
+}
+
+.card section li {
+    border: 1px solid #ccc;
+    margin: 8px 0;
+    padding: 8px;
+}
+
+.info {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.edit ul {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.edit li {
+    display: inline-block;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.edit a {
+    font-size: 14px;
+}
+
+/* Indices */
+#post-admin,
+#category-admin,
+.list {
+    text-align: left;
+    margin-bottom: 24px;
+    padding: 8px 32px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+
+.list article {
+    border: 1px solid black;
+    background-color: white;
+    padding: 16px;
+    margin: 32px 0;
+}
+
+#category-admin form input {
+    line-height: 25px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#category-admin form input:focus {
+    border: 1px solid #0863d3;
+    box-shadow: none;
+    outline: none;
+    padding: 0 4px;
+}
+
+#category-admin form button,
+#category-admin form input {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pagination {
+    font-size: 28px;
+}
+
+.pagination a {
+    padding: 0 16px;
+}
+
+/* */
