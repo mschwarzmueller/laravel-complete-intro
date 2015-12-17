@@ -48,3 +48,10 @@ Route::get('/admin/logout', [
    'uses' => 'AdminController@getLogout',
     'as' => 'logout'
 ]);
+
+/* Send mail */
+
+Route::post('/mail', [
+   'uses' => 'ContactController@postSendMail',
+    'as' => 'mail.send'
+]);

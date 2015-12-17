@@ -83,6 +83,17 @@ header nav a:hover {
     text-align: left;
 }
 
+.success {
+    border: 1px solid darkgreen;
+    border-radius: 3px;
+    background-color: lightgreen;
+    color: green;
+    width: 400px;
+    padding: 16px;
+    margin: 32px auto;
+    text-align: left;
+}
+
 form input,
 form button {
     font-size: inherit;
@@ -103,6 +114,13 @@ form .input-group input {
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 4px 8px;
+}
+
+form .input-group textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 4px 8px;
+    width: 50%;
 }
 
 .btn {
