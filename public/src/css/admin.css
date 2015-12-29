@@ -29,6 +29,19 @@ a:hover {
     background-color: #0863d3;
     color: white;
     transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn.danger {
+    color: white;
+    border: 1px solid #e5003c;
+    background-color: #e5003c;
+}
+
+.btn.danger:hover,
+.btn.danger:active {
+    background-color: white;
+    color: #e5003c;
 }
 
 .btn:hover,
@@ -40,7 +53,6 @@ a:hover {
 a.danger {
     color: red;
 }
-
 a.danger:hover,
 a.danger:active {
     color: #ffaf96;
@@ -205,6 +217,9 @@ header.top-nav a:active {
 #category-admin form button,
 #category-admin form input {
     font-size: 16px;
+}
+
+#category-admin form button {
     cursor: pointer;
 }
 
@@ -216,4 +231,37 @@ header.top-nav a:active {
     padding: 0 16px;
 }
 
-/* */
+/* Post Create and Edit */
+.added-categories {
+    width: 100%;
+    line-height: 28px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 16px;
+}
+
+.added-categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.added-categories li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+li.category-edit {
+    display: none;
+}
+
+li.category-edit input {
+    transition: all 0.3s;
+    max-width: 0px;
+}
+
+#login-form {
+    width: 300px;
+    margin: 32px auto;
+}

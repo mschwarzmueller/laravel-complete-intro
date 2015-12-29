@@ -1,0 +1,4 @@
+.list article {
+    background-color: white;
+    transition: background-color 0.5s;
+}

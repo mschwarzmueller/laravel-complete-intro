@@ -11,6 +11,9 @@
 @include('includes.admin-header')
 @yield('content')
 
+<script>
+    var baseUrl = "{{ URL::to('/') }}";
+</script>
 @yield('scripts')
 </body>
 </html>

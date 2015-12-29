@@ -1,0 +1,37 @@
+.modal {
+    width: 600px;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: fixed;
+    top: 10%;
+    left: calc(50% - 300px);
+    display: none;
+    z-index: 1000;
+    -webkit-transition: top 0.8s;
+    -moz-transition: top 0.8s;
+    -ms-transition: top 0.8s;
+    -o-transition: top 0.8s;
+    transition: top 0.8s;
+}
+
+.modal h1,
+.modal h3 {
+    margin: 0;
+}
+
+.modal .btn {
+    float: right;
+    margin-left: 8px;
+}
+
+.modal-background {
+    background-color: rgba(90, 86, 91, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}

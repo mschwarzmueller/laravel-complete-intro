@@ -9,6 +9,10 @@
 </head>
 <body>
 @include('includes.header')
+<div class="social-slider">
+    FB <br>
+    TW
+</div>
 <div class="main">
     @yield('content')
 </div>

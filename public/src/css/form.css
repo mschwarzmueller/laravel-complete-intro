@@ -13,13 +13,15 @@ form {
 }
 
 .input-group input,
-.input-group textarea {
+.input-group textarea,
+.input-group select {
     width: 100%;
     border-radius: 3px;
     border: 1px solid #ccc;
     outline: none;
     font-size: 16px;
     padding: 4px 8px;
+    vertical-align: top;
 }
 
 .input-group input:focus,
@@ -27,7 +29,19 @@ form {
     border: 1px solid #0863d3;
 }
 
+.input-group select {
+    width: 30%;
+    max-width: 200px;
+    min-width: 150px;
+    height: 28px;
+}
+
 form button {
     font-size: 16px;
     cursor: pointer;
+}
+
+.input-group input.has-error,
+.input-group textarea.has-error {
+    border: 1px solid red;
 }

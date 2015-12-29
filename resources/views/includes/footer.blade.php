@@ -1,7 +1,7 @@
-<footer>
+<footer class="main-footer">
     <nav>
         <ul>
-            <li><a href="#">Footer Nav Item</a></li>
+            <li><a href="{{ route('about') }}">About</a></li>
         </ul>
     </nav>
 </footer>
