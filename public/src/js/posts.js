@@ -1,3 +1,6 @@
+var addedCategoriesText;
+var addedCategoriesIDs;
+
 var tid = setInterval(function () {
     if (document.readyState !== "complete") {
         return;
@@ -5,9 +8,9 @@ var tid = setInterval(function () {
     clearInterval(tid);
 
     var addCategoryBtn = document.getElementsByClassName('btn')[0];
-    var addedCategoriesIDs = document.getElementById('categories');
+    addedCategoriesIDs = document.getElementById('categories');
     addCategoryBtn.addEventListener('click', addCategoryToPost);
-    var addedCategoriesText = document.getElementsByClassName('added-categories')[0];
+    addedCategoriesText = document.getElementsByClassName('added-categories')[0];
 
     for (i = 0; i < addedCategoriesText.firstElementChild.children.length; i++) {
         addedCategoriesText.firstElementChild.children[i].firstElementChild.addEventListener('click', removeCategoryFromPost);
